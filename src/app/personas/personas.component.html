@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de Personas</h1>
+      <button class="btn btn-primary" [disabled] = 'deshabilitar'
+      (click) = 'agregarPersona()'>Agregar Prsona</button>
+      <p>{{mensaje}}</p>
+      <app-persona></app-persona>
+
+      <label>Titulo Persona</label>
+      <input type="text" class='form-control' 
+        (input)= 'modificarTitulo($event)' >
+        {{titulo}}
+    </div>
+  </div>
+  <div class='row'>
+    <div class="col">
+    <h4>DoubleBinding</h4>
+    <label>Persona 2</label>
+    <input type="text" class='form-control' [(ngModel)] = 'titulo2'>
+    {{titulo2}}
+    </div>
+  </div>
+</div>
